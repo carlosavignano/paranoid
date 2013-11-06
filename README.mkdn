@@ -5,9 +5,9 @@ Getting started
 ---------------
 First you must initialize a repository with our sources:
 
-    repo init -u git://github.com/ParanoidAndroid/manifest.git -b jellybean
+    repo init -u git://github.com/ParanoidAndroid/manifest.git -b kitkat
 
-Then sync it up (This will take a while, so get a cup of coffee and some snickers):
+Then sync it up (This will take a while, take a break, grab a KitKat):
 
     repo sync
 
@@ -45,6 +45,6 @@ This will make a signed zip located on out/target/product/-device-.
 Contribute with the project
 ---------------------------
 
-We're an open source project, and we're open to suggestions. Feel free to sumbit patches to our [Gerrit](http://review.paranoid-rom.com/)
+We're an open source project, and we're open to suggestions. Feel free to sumbit patches to our [Gerrit](https://gerrit.paranoidandroid.co/)
 
 
