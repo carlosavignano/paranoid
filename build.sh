@@ -21,9 +21,9 @@ DEVICE="$1"
 EXTRAS="$2"
 
 # get current version
-MAJOR=$(cat $DIR/vendor/pa/config/pa_common.mk | grep 'PA_VERSION_MAJOR = *' | sed  's/PA_VERSION_MAJOR = //g')
-MINOR=$(cat $DIR/vendor/pa/config/pa_common.mk | grep 'PA_VERSION_MINOR = *' | sed  's/PA_VERSION_MINOR = //g')
-MAINTENANCE=$(cat $DIR/vendor/pa/config/pa_common.mk | grep 'PA_VERSION_MAINTENANCE = *' | sed  's/PA_VERSION_MAINTENANCE = //g')
+MAJOR=$(cat $DIR/vendor/pa/vendor.mk | grep 'ROM_VERSION_MAJOR = *' | sed  's/ROM_VERSION_MAJOR = //g')
+MINOR=$(cat $DIR/vendor/pa/vendor.mk | grep 'ROM_VERSION_MINOR = *' | sed  's/ROM_VERSION_MINOR = //g')
+MAINTENANCE=$(cat $DIR/vendor/pa/vendor.mk | grep 'ROM_VERSION_MAINTENANCE = *' | sed  's/ROM_VERSION_MAINTENANCE = //g')
 VERSION=$MAJOR.$MINOR$MAINTENANCE
 
 # if we have not extras, reduce parameter index by 1
@@ -45,9 +45,9 @@ clear
 
 echo -e "${cya}Building ${bldcya}ParanoidAndroid v$VERSION ${txtrst}";
 
-echo -e "${cya}"
-./vendor/pa/tools/getdevicetree.py $DEVICE
-echo -e "${txtrst}"
+#echo -e "${cya}"
+#./vendor/pa/tools/getdevicetree.py $DEVICE
+#echo -e "${txtrst}"
 
 # decide what command to execute
 case "$EXTRAS" in
